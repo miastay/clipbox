@@ -1,0 +1,41 @@
+@import "./root.scss";
+
+.nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    z-index: 1000000;
+    left: 10px;
+    top: 10px;
+    width: 5vw;
+    max-width: 300px;
+    min-width: 65px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: $boxshadow;
+    * {
+        z-index: 1000000;
+    }
+    > * {
+        padding: $padding-sm;
+    }
+    .logo {
+        max-width: 300px;
+        min-width: 65px;
+    }
+    .item {
+        padding: $padding-sm;
+    }
+    &:hover {
+        background: rgba(255, 255, 255, 1);
+    }
+    transition: background-color 0.5s ease;
+
+    button {
+        &.locked {
+            filter: brightness(0.6)
+        }
+    }
+
+}

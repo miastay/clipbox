@@ -1,0 +1,53 @@
+@import "./root.scss";
+
+body {
+    background: url('../dot.png') repeat;
+    background-size: 10px;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: $padding-lg;
+    width: 100vw;
+    height: 100vh;
+    .board-name {
+        position: fixed;
+        float: right;
+        right: $padding-lg;
+        text-align: right;
+        top: $padding-lg;
+        font-size: x-large;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.6);
+        z-index: 1000000;
+    }
+}
+
+.clip {
+    position: absolute;
+    z-index: 10;
+    &.active {
+        outline: dashed 2px magenta;
+    }
+    .scaler {
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        background: magenta;
+        left: 100%;
+        top: 100%;
+        float: right;
+        position: absolute;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.clipper {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
